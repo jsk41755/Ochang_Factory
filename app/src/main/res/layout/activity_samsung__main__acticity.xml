@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubActivity"
+    tools:openDrawer="start"
+    android:id="@+id/sam_drawer_layout">
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/sam_navi_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/sam_menu_header"
+        android:theme="@style/navigationTheme"
+        app:menu="@menu/samsung_menu">
+    </com.google.android.material.navigation.NavigationView>
+
+
+    <LinearLayout
+        android:id="@+id/sam_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/sam_menu_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_notes_24"/>
+
+
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

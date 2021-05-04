@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OchangFactory</string>
+
+    <string name="samsung_name">삼성SDI</string>
+    <string name="samsung_address">청주시 청원구 오창읍 과학산업4로 146</string>
+
+    <string name="samnav1_1">대상물 기본현황</string>
+    <string name="samnav1_2">동별현황</string>
+    <string name="samnav1_3">배치도</string>
+
+    <string name="samnav2_1">동별 소방시설현황</string>
+
+    <string name="samnav3_1">위험물 현황</string>
+    <string name="samnav3_2">위험물 배치도</string>
+    <string name="samnav3_3">동별 사용현황</string>
+
+    <string name="samnav4_1">유해화학물질 현황</string>
+    <string name="samnav4_2">유해화학물질 배치도</string>
+    <string name="samnav4_3">동별 사용현황</string>
+
+    <string name="samnav5_1">차량 부서 위치</string>
+    <string name="samnav5_2">위험물 진압대책</string>
+    <string name="samnav5_3">유해화학물질 진압대책</string>
+
+
+</resources>
