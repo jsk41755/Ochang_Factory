@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OchangFactory"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Samsung_Main_Acticity"></activity>
+        <activity android:name=".Samsung_1_1"></activity>
+        <activity android:name=".Samsung_Main_Acticity" />
         <activity android:name=".SubActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
