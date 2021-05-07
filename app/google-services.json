@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "712591234360",
+    "firebase_url": "https://ochangfactory-4f25f-default-rtdb.firebaseio.com",
+    "project_id": "ochangfactory-4f25f",
+    "storage_bucket": "ochangfactory-4f25f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712591234360:android:a06dbc7fc3b64f5308ddcd",
+        "android_client_info": {
+          "package_name": "com.example.ochangfactory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712591234360-seu4oimq3vc47fe0e2dvf3n2bgm5gfh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ochangfactory",
+            "certificate_hash": "89062c6373823451634ac07af93bf2bd5e7ce900"
+          }
+        },
+        {
+          "client_id": "712591234360-vhqtrq9uat9pugun865fv8uuocl5bttc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ochangfactory",
+            "certificate_hash": "433d5bbf434af8193aeb9f9e00977f4a43b8673f"
+          }
+        },
+        {
+          "client_id": "712591234360-epqbjkehq3v6uel9a08r2ntthaa9o8qj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOiGuKPJf914NI6yme4rglmH0K3i1yL-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712591234360-epqbjkehq3v6uel9a08r2ntthaa9o8qj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

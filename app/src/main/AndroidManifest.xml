@@ -5,17 +5,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.OchangFactory"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Samsung_1_1"></activity>
+        <activity android:name=".OtpActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".Samsung_1_1" />
         <activity android:name=".Samsung_Main_Acticity" />
-        <activity android:name=".SubActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +25,6 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="2390f7657d30a7b09841dbe4298be935" />
     </application>
 
 </manifest>

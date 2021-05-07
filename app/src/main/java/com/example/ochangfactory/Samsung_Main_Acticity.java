@@ -37,6 +37,7 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
         contentView = findViewById(R.id.sam_content);
 
         navigationDrawer();
+        drawerLayout.openDrawer(GravityCompat.START);
     }
 
     @Override

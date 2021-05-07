@@ -1,29 +1,22 @@
 package com.example.ochangfactory;
 
-import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
+
 import android.os.Bundle;
-import android.util.Base64;
-import android.util.Log;
+
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.kakao.auth.ISessionCallback;
-import com.kakao.auth.Session;
-import com.kakao.network.ErrorResult;
-import com.kakao.usermgmt.UserManagement;
-import com.kakao.usermgmt.callback.MeV2ResponseCallback;
-import com.kakao.usermgmt.response.MeV2Response;
-import com.kakao.util.exception.KakaoException;
-
-import java.security.MessageDigest;
 
 public class MainActivity extends AppCompatActivity {
-    private ISessionCallback mSessionCallback;
+
+    ImageButton Samsung_SDI_Btn;
+    private long backBtnTime = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,87 +24,34 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSessionCallback = new ISessionCallback()   //로그인 상태값
-        {
+        Samsung_SDI_Btn = findViewById(R.id.samsung_sdi_logo);
+        Samsung_SDI_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onSessionOpened()
-            {
-                // 로그인 요청
-                UserManagement.getInstance().me(new MeV2ResponseCallback()
-                {
-                    @Override
-                    public void onFailure(ErrorResult errorResult)
-                    {
-                        // 로그인 실패
-                        Toast.makeText(MainActivity.this, "로그인 도중에 오류가 발생했습니다.", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onSessionClosed(ErrorResult errorResult)
-                    {
-                        // 세션이 닫힘..
-                        Toast.makeText(MainActivity.this, "세션이 닫혔습니다.. 다시 시도해주세요", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onSuccess(MeV2Response result)
-                    {
-                        // 로그인 성공
-                        Intent intent = new Intent(MainActivity.this, SubActivity.class);
-                        intent.putExtra("name", result.getKakaoAccount().getProfile().getNickname());
-                        intent.putExtra("profileImg", result.getKakaoAccount().getProfile().getProfileImageUrl());
-                        intent.putExtra("email", result.getKakaoAccount().getEmail());
-                        startActivity(intent);
-
-//                        Toast.makeText(MainActivity.this, "환영 합니다 !", Toast.LENGTH_SHORT).show();
-                    }
-                });
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Samsung_Main_Acticity.class);
+                startActivity(intent);
             }
+        });
 
-            @Override
-            public void onSessionOpenFailed(KakaoException exception)
-            {
-                Toast.makeText(MainActivity.this, "onSessionOpenFailed", Toast.LENGTH_SHORT).show();
-            }
-        };
-        Session.getCurrentSession().addCallback(mSessionCallback);
-        Session.getCurrentSession().checkAndImplicitOpen();
-
-
-//        getAppKeyHash();
     }
 
+    @Override
+    public void onBackPressed() {//뒤로가기 두 번 눌를 시 종료
+        long curTime = System.currentTimeMillis();
+        long gaptime = curTime - backBtnTime;
 
-    /**
-     * 카카오 로그인 시 필요한 해시키를 얻는 메소드 이다.
-     */
-    private void getAppKeyHash() {
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md;
-                md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                String something = new String(Base64.encode(md.digest(), 0));
-                Log.e("Hash key", something);
-            }
-        } catch (Exception e) {
-            Log.e("name not found", e.toString());
+        if (0 <= gaptime && 2000 >= gaptime) {
+            // 태스크를 백그라운드로 이동
+            moveTaskToBack(true);
+            finishAndRemoveTask();
+            android.os.Process.killProcess(android.os.Process.myPid());
+        } else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다", Toast.LENGTH_SHORT).show();
         }
+        //super.onBackPressed();
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
-    {
-        if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data))
-            super.onActivityResult(requestCode, resultCode, data);
-    }
 
-    @Override
-    protected void onDestroy()
-    {
-        super.onDestroy();
-        Session.getCurrentSession().removeCallback(mSessionCallback);
-    }
 }
