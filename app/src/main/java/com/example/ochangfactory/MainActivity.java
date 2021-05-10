@@ -11,18 +11,26 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class MainActivity extends AppCompatActivity {
 
+    private FirebaseAuth mAuth;
+    private FirebaseUser mCurrentUser;
+
     ImageButton Samsung_SDI_Btn;
     private long backBtnTime = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
+        mCurrentUser = mAuth.getCurrentUser();
 
         Samsung_SDI_Btn = findViewById(R.id.samsung_sdi_logo);
         Samsung_SDI_Btn.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +60,21 @@ public class MainActivity extends AppCompatActivity {
         //super.onBackPressed();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mCurrentUser == null){
+            sendUserToLogin();
+        }
+    }
+
+    private void sendUserToLogin() {
+        Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+        loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(loginIntent);
+        finish();
+    }
 
 
 }
