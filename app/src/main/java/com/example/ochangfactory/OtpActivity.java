@@ -50,27 +50,24 @@ public class OtpActivity extends AppCompatActivity {
 
         mVerifyBtn = findViewById(R.id.verify_btn);
 
-        mVerifyBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mVerifyBtn.setOnClickListener(v -> {
 
-                String otp = mOtpText.getText().toString();
+            String otp = mOtpText.getText().toString();
 
-                if(otp.isEmpty()){
+            if(otp.isEmpty()){
 
-                    mOtpFeedback.setVisibility(View.VISIBLE);
-                    mOtpFeedback.setText("Please fill in the form and try again.");
+                mOtpFeedback.setVisibility(View.VISIBLE);
+                mOtpFeedback.setText("인증번호가 틀립니다.");
 
-                } else {
+            } else {
 
-                    mOtpProgress.setVisibility(View.VISIBLE);
-                    mVerifyBtn.setEnabled(false);
+                mOtpProgress.setVisibility(View.VISIBLE);
+                mVerifyBtn.setEnabled(false);
 
-                    PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mAuthVerificationId, otp);
-                    signInWithPhoneAuthCredential(credential);
-                }
-
+                PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mAuthVerificationId, otp);
+                signInWithPhoneAuthCredential(credential);
             }
+
         });
 
     }
@@ -87,7 +84,7 @@ public class OtpActivity extends AppCompatActivity {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 // The verification code entered was invalid
                                 mOtpFeedback.setVisibility(View.VISIBLE);
-                                mOtpFeedback.setText("There was an error verifying OTP");
+                                mOtpFeedback.setText("인증번호 에러!");
                             }
                         }
                         mOtpProgress.setVisibility(View.INVISIBLE);

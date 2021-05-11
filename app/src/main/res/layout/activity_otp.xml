@@ -35,7 +35,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="We have sent you an OTP \n for phone number verification"
+        android:text="인증코드를 문자로 전송했습니다.\n 알맞게 입력해주세요."
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

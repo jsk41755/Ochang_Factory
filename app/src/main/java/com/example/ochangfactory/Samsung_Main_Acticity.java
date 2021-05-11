@@ -55,14 +55,11 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.samnav1_1);
 
-        menuIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(drawerLayout.isDrawerVisible(GravityCompat.START)){
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                }
-                else drawerLayout.openDrawer(GravityCompat.START);
+        menuIcon.setOnClickListener(v -> {
+            if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+                drawerLayout.closeDrawer(GravityCompat.START);
             }
+            else drawerLayout.openDrawer(GravityCompat.START);
         });
 
         animateNavigationDrawer();

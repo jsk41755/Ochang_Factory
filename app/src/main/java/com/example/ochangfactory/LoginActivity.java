@@ -28,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
 
-    private EditText mCountryCode;
     private EditText mPhoneNumber;
 
     private Button mGenerateBtn;
@@ -46,7 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
 
-        mCountryCode = findViewById(R.id.country_code_text);
+        mAuth.setLanguageCode("ko");
+
         mPhoneNumber = findViewById(R.id.phone_number_text);
         mGenerateBtn = findViewById(R.id.generate_btn);
         mLoginProgress = findViewById(R.id.login_progress_bar);
@@ -55,15 +55,20 @@ public class LoginActivity extends AppCompatActivity {
         mGenerateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String country_code = mCountryCode.getText().toString();
                 String phone_number = mPhoneNumber.getText().toString();
 
-                String complete_phone_number = "+" + country_code + phone_number;
+                if (phone_number.startsWith("0")) {
+                    phone_number = phone_number.substring(1);
+                }
 
-                if(country_code.isEmpty() || phone_number.isEmpty()){
-                    mLoginFeedbackText.setText("Please fill in the form to continue.");
+
+                String complete_phone_number = "+" + 82 + phone_number;
+
+                if(phone_number.length() != 10 ||phone_number.isEmpty()){
+                    mLoginFeedbackText.setText("전화번호를 잘못 입력하셨습니다.");
                     mLoginFeedbackText.setVisibility(View.VISIBLE);
                 } else {
+                    mLoginFeedbackText.setVisibility(View.INVISIBLE);
                     mLoginProgress.setVisibility(View.VISIBLE);
                     mGenerateBtn.setEnabled(false);
 
@@ -87,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onVerificationFailed(FirebaseException e) {
-                mLoginFeedbackText.setText("Verification Failed, please try again.");
+                mLoginFeedbackText.setText("인증오류. 다시 시도해주세요.");
                 mLoginFeedbackText.setVisibility(View.VISIBLE);
                 mLoginProgress.setVisibility(View.INVISIBLE);
                 mGenerateBtn.setEnabled(true);
@@ -132,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 // The verification code entered was invalid
                                 mLoginFeedbackText.setVisibility(View.VISIBLE);
-                                mLoginFeedbackText.setText("There was an error verifying OTP");
+                                mLoginFeedbackText.setText("인증요청 에러!!");
                             }
                         }
                         mLoginProgress.setVisibility(View.INVISIBLE);

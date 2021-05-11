@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Verify Your Number"
+        android:text="휴대전화 인증"
         android:textColor="@color/colorPrimary"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,41 +35,26 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="Please enter your Country Code \n and Phone number for verification"
+        android:text="'-'를 제외하고 양식에 맞는 \n 번호를 입력해주세요."
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_title" />
 
-    <EditText
-        android:id="@+id/country_code_text"
-        android:layout_width="64dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="+91"
-        android:inputType="number"
-        android:padding="16dp"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_desc" />
 
     <EditText
         android:id="@+id/phone_number_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="112dp"
         android:ems="10"
-        android:hint="Your Phone Number"
+        android:hint="ex)01012345678"
         android:inputType="phone"
         android:padding="16dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/country_code_text"
         app:layout_constraintTop_toBottomOf="@+id/login_desc" />
 
     <Button
@@ -92,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="TVAC Studio"
+        android:text="청주동부소방서"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
