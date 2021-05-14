@@ -19,7 +19,7 @@ public class Samsung_1_1 extends AppCompatActivity {
 
         mPhotoView = findViewById(R.id.iv_photo);
 
-        Drawable bitmap = ContextCompat.getDrawable(this, R.drawable.wallpaper);
+        Drawable bitmap = ContextCompat.getDrawable(this, R.drawable.gcc_map);
         mPhotoView.setImageDrawable(bitmap);
 
     }

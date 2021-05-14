@@ -2,9 +2,13 @@ package com.example.ochangfactory;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextView mLoginFeedbackText;
 
+    private String PhoneNum;
+
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
     @Override
@@ -44,6 +50,27 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUser = mAuth.getCurrentUser();
+
+        /*TelephonyManager telManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_NUMBERS)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+
+            return;
+        }
+        PhoneNum = telManager.getLine1Number();
+        if(PhoneNum.startsWith("+82")){
+            PhoneNum = PhoneNum.replace("+82", "0");
+        }
+*/
 
         mAuth.setLanguageCode("ko");
 
@@ -67,7 +94,12 @@ public class LoginActivity extends AppCompatActivity {
                 if(phone_number.length() != 10 ||phone_number.isEmpty()){
                     mLoginFeedbackText.setText("전화번호를 잘못 입력하셨습니다.");
                     mLoginFeedbackText.setVisibility(View.VISIBLE);
-                } else {
+                }
+                else if(PhoneNum == "+" + 82 + phone_number){
+                    mLoginFeedbackText.setText("입력하신 번호와 단말기 전화번호가 틀립니다.");
+                    mLoginFeedbackText.setVisibility(View.VISIBLE);
+                }
+                else {
                     mLoginFeedbackText.setVisibility(View.INVISIBLE);
                     mLoginProgress.setVisibility(View.VISIBLE);
                     mGenerateBtn.setEnabled(false);
