@@ -90,6 +90,9 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
             case R.id.samnav1_1:
                 startActivity(new Intent(getApplicationContext(),Samsung_1_1.class));
                 break;
+            case  R.id.samnav1_2:
+                startActivity(new Intent(getApplicationContext(),Samsung_1_2.class));
+                break;
         }
 
         return true;
