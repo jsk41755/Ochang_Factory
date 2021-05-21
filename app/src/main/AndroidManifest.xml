@@ -19,6 +19,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".Samsung_1_1" />
         <activity android:name=".Samsung_1_2" />
+        <activity android:name=".Samsung_1_3" />
+        <activity android:name=".Samsung_2_1" />
+        <activity android:name=".Samsung_3_1" />
+        <activity android:name=".Samsung_3_2" />
         <activity android:name=".Samsung_Main_Acticity" />
         <activity android:name=".MainActivity">
             <intent-filter>

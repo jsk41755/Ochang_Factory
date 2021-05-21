@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/samsung_1_3_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="번호"
+                android:textSize="27dp"
+                android:fontFamily="@font/naver_font"
+                android:textColor="#000"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/using"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="용도"
+                android:textSize="27dp"
+                android:fontFamily="@font/naver_font"
+                android:textColor="#000"
+                android:padding="5dp"/>
+
+
+            <TextView
+                android:id="@+id/note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="비고"
+                android:textSize="27dp"
+                android:fontFamily="@font/naver_font"
+                android:textColor="#000"
+                android:padding="5dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.cardview.widget.CardView>

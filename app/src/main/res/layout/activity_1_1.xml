@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_1"
+            android:text="제목"
+            android:textSize="19dp"
+            android:fontFamily="@font/naver_font"
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:background="@drawable/cell_shape"
+            android:gravity="center"/>
+
+    </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 구분 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:text=" 내역 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:text=" 비고 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 대상명 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/object_1"
+                android:text="15개동(공장3,기계실5,창고6,\n사무1)연면적51,249 2 m\u00B2."
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 주소 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 건물현황 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/building_situation"
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 공설소화전 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/public_fireplug"
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 사설소화전 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/private_fireplug"
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 소방안전관리자 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/firefighting_safety_supervisor"
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text=" 위험물안전관리자 "
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/dangerous_safety_supervisor"
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+
+            <TextView
+                android:textSize="19dp"
+                android:fontFamily="@font/naver_font"
+                android:padding="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000"
+                android:background="@drawable/cell_shape"
+                android:gravity="center"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

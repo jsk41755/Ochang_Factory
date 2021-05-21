@@ -22,5 +22,46 @@
     <string name="samnav5_2">위험물 진압대책</string>
     <string name="samnav5_3">유해화학물질 진압대책</string>
 
+    <string-array name="samsung_building_situation">
+        <item>1) 용도 : 제조</item>
+        <item>2) 용도 : 제조</item>
+        <item>3) 용도 : 제조</item>
+        <item>4) 용도 : 창고</item>
+        <item>5) 용도 : 창고</item>
+        <item>6) 용도 : 창고</item>
+        <item>7) 용도 : 창고</item>
+        <item>8) 용도 : 창고</item>
+        <item>9) 용도 : 저장소</item>
+        <item>10) 용도 : U/T시설</item>
+        <item>11) 용도 : U/T시설</item>
+        <item>12) 용도 : U/T시설</item>
+        <item>13) 용도 : U/T시설</item>
+        <item>14) 용도 : U/T시설</item>
+        <item>15) 용도 : U/T시설</item>
+        <item>16) 용도 : U/T시설</item>
+        <item>17) 용도 : 일반취급소</item>
+        <item>18) 용도 : 출입관리</item>
+    </string-array>
+    
+    <string-array name="samsung_description_1_3">
+        <item>      비고 : 편광필름</item>
+        <item>      비고 : 편광필름</item>
+        <item>      비고 : SOH</item>
+        <item>      비고 : 원자재</item>
+        <item>      비고 : 완제품</item>
+        <item>      비고 : 위험물</item>
+        <item>      비고 : 위험물</item>
+        <item>      비고 : 폐기물</item>
+        <item>      비고 : 위험물</item>
+        <item>      비고 : 변전실</item>
+        <item>      비고 : 폐수처리</item>
+        <item>      비고 : 냉동기 등</item>
+        <item>      비고 : 보일러 등</item>
+        <item>      비고 : R/O 등</item>
+        <item>      비고 : 냉동기 등</item>
+        <item>      비고 : 필터 등</item>
+        <item>      비고 : 위험물</item>
+        <item>      비고 : 보안실</item>
+    </string-array>
 
 </resources>
