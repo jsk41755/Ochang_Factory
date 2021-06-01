@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.fragment.app.FragmentContainerView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_main"
+    android:name="com.example.ochangfactory.MainFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Samsung_1_2">
-
-    <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/iv_photo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/samsung_dangerous_3_1" />
-
-</FrameLayout>
+    tools:layout="@layout/fragment_main" />

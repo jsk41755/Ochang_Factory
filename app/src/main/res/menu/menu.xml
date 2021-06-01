@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="대상물 현황">
+        <menu>
+
+            <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav1_1"
+            android:title="@string/samnav1_1"
+            />
+        <item
+            android:id="@+id/nav1_2"
+            android:title="@string/samnav1_2"
+            />
+        <item
+            android:id="@+id/nav1_3"
+            android:title="@string/samnav1_3"
+            />
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="소방시설 현황">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav2_1"
+                    android:title="@string/samnav2_1"
+                    />
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="위험물 현황">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav3_1"
+                    android:title="@string/samnav3_1"
+                    />
+                <item
+                    android:id="@+id/nav3_2"
+                    android:title="@string/samnav3_2"
+                    />
+                <item
+                    android:id="@+id/nav3_3"
+                    android:title="@string/samnav3_3"
+                    />
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="유해화학물질 현황">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav4_1"
+                    android:title="@string/samnav4_1"
+                    />
+                <item
+                    android:id="@+id/nav4_2"
+                    android:title="@string/samnav4_2"
+                    />
+                <item
+                    android:id="@+id/nav4_3"
+                    android:title="@string/samnav4_3"
+                    />
+
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="화재진압대책">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav5_1"
+                    android:title="@string/samnav5_1"
+                    />
+                <item
+                    android:id="@+id/nav5_2"
+                    android:title="@string/samnav5_2"
+                    />
+                <item
+                    android:id="@+id/nav5_3"
+                    android:title="@string/samnav5_3"
+                    />
+
+            </group>
+
+        </menu>
+    </item>
+
+
+</menu>

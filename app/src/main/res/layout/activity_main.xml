@@ -5,21 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="30dp">
+    android:padding="30dp"
+    android:orientation="vertical">
 
-    <ImageButton
+    <androidx.cardview.widget.CardView
         android:id="@+id/samsung_sdi_logo"
-        android:src="@drawable/samsung_sdi_logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="fitCenter"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="8dp">
 
-    <ImageButton
-        android:id="@+id/gccorp_logo"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/gccorp_logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:src="@drawable/samsung_sdi_logo"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:textColor="#262626"
+                android:layout_below="@id/image"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:text="삼성SDI"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_below="@id/title"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:maxLines="3"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:text="청주시 청원구 오창읍 과학산업4로 146"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gcc_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/gccIMG"
+                android:src="@drawable/gccorp_logo"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:textColor="#262626"
+                android:layout_below="@id/gccIMG"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:text="녹십자"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/desc2"
+                android:layout_below="@id/title2"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:maxLines="3"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:text="청주시 청원구 오창읍 과학산업2로 586"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 
 

@@ -17,7 +17,7 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/sam_menu_header"
         android:theme="@style/navigationTheme"
-        app:menu="@menu/samsung_menu">
+        app:menu="@menu/menu">
     </com.google.android.material.navigation.NavigationView>
 
 

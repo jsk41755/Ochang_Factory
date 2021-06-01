@@ -53,7 +53,6 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
     private void navigationDrawer() {
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.samnav1_1);
 
         menuIcon.setOnClickListener(v -> {
             if(drawerLayout.isDrawerVisible(GravityCompat.START)){
@@ -87,17 +86,23 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()){
-            case R.id.samnav1_1:
+            case R.id.nav1_1:
                 startActivity(new Intent(getApplicationContext(),Samsung_1_1.class));
                 break;
-            case  R.id.samnav1_2:
+            case  R.id.nav1_2:
                 startActivity(new Intent(getApplicationContext(),Samsung_1_2.class));
                 break;
-            case  R.id.samnav1_3:
+            case  R.id.nav1_3:
                 startActivity(new Intent(getApplicationContext(),Samsung_1_3.class));
                 break;
-            case  R.id.samnav2_1:
+            case  R.id.nav2_1:
                 startActivity(new Intent(getApplicationContext(),Samsung_2_1.class));
+                break;
+            case  R.id.nav3_1:
+                startActivity(new Intent(getApplicationContext(),Samsung_3_1.class));
+                break;
+            case  R.id.nav3_2:
+                startActivity(new Intent(getApplicationContext(),Samsung_3_2.class));
                 break;
         }
 

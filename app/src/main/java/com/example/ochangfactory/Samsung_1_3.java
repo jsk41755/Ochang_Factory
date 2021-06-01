@@ -10,7 +10,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 public class Samsung_1_3 extends AppCompatActivity {
     private PhotoView mPhotoView;
     String s1[], s2[];
-    int s3[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
+    String s3[] = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"};
     RecyclerView recyclerView;
 
     @Override
@@ -23,8 +23,8 @@ public class Samsung_1_3 extends AppCompatActivity {
         s1 = getResources().getStringArray(R.array.samsung_building_situation);
         s2 = getResources().getStringArray(R.array.samsung_description_1_3);
 
-        Samsung_1_3Adapter samsung_1_3Adapter = new Samsung_1_3Adapter(this, s1, s2, s3);
-        recyclerView.setAdapter(samsung_1_3Adapter);
+        Menu_1_3Adapter menu_1_3Adapter = new Menu_1_3Adapter(this, s1, s2, s3);
+        recyclerView.setAdapter(menu_1_3Adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         createMapView();
     }

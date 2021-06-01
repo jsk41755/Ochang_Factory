@@ -19,7 +19,7 @@
             android:id="@+id/iv_photo"
             android:layout_width="match_parent"
             android:layout_height="500dp"
-            android:scaleType="fitStart"
+            android:scaleType="fitCenter"
             android:src="@drawable/samsung_plot_plan_1_3" />
     </FrameLayout>
 
@@ -27,7 +27,12 @@
         android:id="@+id/dragView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frameLayout">
 
         <RelativeLayout
@@ -48,13 +53,13 @@
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="90dp"
-                        android:layout_height="15dp"
+                        android:layout_height="25dp"
                         android:layout_marginBottom="2dp"
-                        android:textSize="21dp"
                         android:fontFamily="@font/naver_font"
                         android:maxLines="1"
                         android:text=" 구분"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="21dp" />
 
                 </LinearLayout>
 
@@ -75,12 +80,12 @@
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="100dp"
-                        android:layout_height="15dp"
+                        android:layout_height="25dp"
                         android:layout_marginBottom="2dp"
-                        android:textSize="21dp"
                         android:fontFamily="@font/naver_font"
                         android:text=" 용도"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="21dp" />
                 </LinearLayout>
 
                 <View
@@ -100,24 +105,39 @@
                     <TextView
                         android:id="@+id/textView7"
                         android:layout_width="100dp"
-                        android:layout_height="15dp"
+                        android:layout_height="25dp"
                         android:layout_marginBottom="2dp"
-                        android:textSize="21dp"
                         android:fontFamily="@font/naver_font"
                         android:text=" 비고"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="21dp" />
                 </LinearLayout>
             </LinearLayout>
-
         </RelativeLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_1_3"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="2dp"
+            android:background="#B1BCBE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dragView">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_1_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
 
 
 

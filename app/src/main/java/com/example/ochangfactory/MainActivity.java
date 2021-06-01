@@ -2,6 +2,7 @@ package com.example.ochangfactory;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
 
-    ImageButton Samsung_SDI_Btn;
+    CardView Samsung_SDI_Btn;
+    CardView Gcc_Btn;
     private long backBtnTime = 0;
 
     @Override
@@ -37,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Samsung_Main_Acticity.class);
+                startActivity(intent);
+            }
+        });
+
+        Gcc_Btn = findViewById(R.id.gcc_logo);
+        Gcc_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Gcc_Main_Activity.class);
                 startActivity(intent);
             }
         });
