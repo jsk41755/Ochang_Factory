@@ -1,27 +1,3 @@
-/*
- * MIT License
- *
- * Copyright (c) 2021 Evren Coşkun
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
-
 package com.example.ochangfactory.tableview;
 
 import android.util.Log;
@@ -38,34 +14,26 @@ import com.evrencoskun.tableview.sort.SortState;
 import com.example.ochangfactory.R;
 import com.example.ochangfactory.tableview.holder.CellViewHolder;
 import com.example.ochangfactory.tableview.holder.ColumnHeaderViewHolder;
-import com.example.ochangfactory.tableview.holder.GenderCellViewHolder;
-import com.example.ochangfactory.tableview.holder.MoodCellViewHolder;
 import com.example.ochangfactory.tableview.holder.RowHeaderViewHolder;
 import com.example.ochangfactory.tableview.model.Cell;
 import com.example.ochangfactory.tableview.model.ColumnHeader;
 import com.example.ochangfactory.tableview.model.RowHeader;
 
-/**
- * Created by evrencoskun on 11/06/2017.
- * <p>
- * This is a sample of custom TableView Adapter.
- */
-
-public class TableViewAdapter extends AbstractTableAdapter<ColumnHeader, RowHeader, Cell> {
+public class GcTableViewAdapter_4_1 extends AbstractTableAdapter<ColumnHeader, RowHeader, Cell> {
 
     // Cell View Types by Column Position
     private static final int MOOD_CELL_TYPE = 1;
     private static final int GENDER_CELL_TYPE = 2;
     // add new one if it necessary..
 
-    private static final String LOG_TAG = TableViewAdapter.class.getSimpleName();
+    private static final String LOG_TAG = GcTableViewAdapter_4_1.class.getSimpleName();
 
     @NonNull
-    private final TableViewModel mTableViewModel;
+    private final GcTableViewModel_4_1 mGcTableViewModel_4_1;
 
-    public TableViewAdapter(@NonNull TableViewModel tableViewModel) {
+    public GcTableViewAdapter_4_1(@NonNull GcTableViewModel_4_1 GctableViewModel_4_1) {
         super();
-        this.mTableViewModel = tableViewModel;
+        this.mGcTableViewModel_4_1 = GctableViewModel_4_1;
     }
 
     /**
@@ -98,11 +66,11 @@ public class TableViewAdapter extends AbstractTableAdapter<ColumnHeader, RowHead
                 return new GenderCellViewHolder(layout);
             default:
                 // For cells that display a text*/
-                layout = inflater.inflate(R.layout.table_view_cell_layout, parent, false);
+        layout = inflater.inflate(R.layout.table_view_cell_layout, parent, false);
 
-                // Create a Cell ViewHolder
-                return new CellViewHolder(layout);
-        }
+        // Create a Cell ViewHolder
+        return new CellViewHolder(layout);
+    }
 
 
     /**
@@ -242,14 +210,14 @@ public class TableViewAdapter extends AbstractTableAdapter<ColumnHeader, RowHead
         View corner = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.table_view_corner_layout, parent, false);
         corner.setOnClickListener(view -> {
-            SortState sortState = TableViewAdapter.this.getTableView()
+            SortState sortState = GcTableViewAdapter_4_1.this.getTableView()
                     .getRowHeaderSortingStatus();
             if (sortState != SortState.ASCENDING) {
                 Log.d("TableViewAdapter", "Order Ascending");
-                TableViewAdapter.this.getTableView().sortRowHeader(SortState.ASCENDING);
+                GcTableViewAdapter_4_1.this.getTableView().sortRowHeader(SortState.ASCENDING);
             } else {
                 Log.d("TableViewAdapter", "Order Descending");
-                TableViewAdapter.this.getTableView().sortRowHeader(SortState.DESCENDING);
+                GcTableViewAdapter_4_1.this.getTableView().sortRowHeader(SortState.DESCENDING);
             }
         });
         return corner;
@@ -281,9 +249,9 @@ public class TableViewAdapter extends AbstractTableAdapter<ColumnHeader, RowHead
         // then you should fill this method to be able create different
         // type of CellViewHolder on "onCreateCellViewHolder"
         switch (column) {
-            case TableViewModel.MOOD_COLUMN_INDEX:
+            case GcTableViewModel_4_1.MOOD_COLUMN_INDEX:
                 return MOOD_CELL_TYPE;
-            case TableViewModel.GENDER_COLUMN_INDEX:
+            case GcTableViewModel_4_1.GENDER_COLUMN_INDEX:
                 return GENDER_CELL_TYPE;
             default:
                 // Default view type

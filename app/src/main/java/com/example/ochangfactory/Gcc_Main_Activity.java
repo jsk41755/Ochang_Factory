@@ -104,6 +104,9 @@ public class Gcc_Main_Activity extends AppCompatActivity implements NavigationVi
             case  R.id.nav3_2:
                 startActivity(new Intent(getApplicationContext(),Gcc_3_2.class));
                 break;
+            case  R.id.nav4_1:
+                startActivity(new Intent(getApplicationContext(),Gcc_4_1.class));
+                break;
         }
 
         return true;

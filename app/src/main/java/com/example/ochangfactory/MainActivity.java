@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(mCurrentUser == null){
+/*        if(mCurrentUser == null){
             sendUserToLogin();
-        }
+        }*/
     }
 
     private void sendUserToLogin() {
