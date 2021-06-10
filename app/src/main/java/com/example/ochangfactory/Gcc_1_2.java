@@ -10,6 +10,6 @@ import com.github.chrisbanes.photoview.PhotoView;
 
 public class Gcc_1_2 extends AppCompatActivity {
     public Gcc_1_2() {
-        super(R.layout.activity_2_1);
+        super(R.layout.activity_1_2);
     }
 }

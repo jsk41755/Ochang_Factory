@@ -40,7 +40,7 @@ import java.util.Random;
  * Created by evrencoskun on 4.02.2018.
  */
 
-public class TableViewModel {
+public class GcTableViewModel_3_1 {
 
     // Columns indexes
     public static final int MOOD_COLUMN_INDEX = 3;
@@ -66,7 +66,7 @@ public class TableViewModel {
     @DrawableRes
     private final int mSadDrawable;
 
-    public TableViewModel() {
+    public GcTableViewModel_3_1() {
         // initialize drawables
         mBoyDrawable = R.drawable.ic_male;
         mGirlDrawable = R.drawable.ic_female;
@@ -144,18 +144,6 @@ public class TableViewModel {
         header = new ColumnHeader(String.valueOf(i), title);
         i++;
         list.add(header);
-
-
-        /*for (int i = 0; i < COLUMN_SIZE; i++) {
-            String title = "column " + i;
-            int nRandom = new Random().nextInt();
-            if (nRandom % 4 == 0 || nRandom % 3 == 0 || nRandom == i) {
-                title = "large column " + i;
-            }
-
-            ColumnHeader header = new ColumnHeader(String.valueOf(i), title);
-            list.add(header);
-        }*/
 
         return list;
     }
@@ -291,19 +279,19 @@ public class TableViewModel {
                         text = "지하탱크저장소";
                     }
                     if (i == 9) {
-                        text = "옥외탱크저장소(ET-112)";
+                        text = "옥외탱크저장소\n(ET-112)";
                     }
                     if (i == 10) {
-                        text = "옥외탱크저장소(ET-104)";
+                        text = "옥외탱크저장소\n(ET-104)";
                     }
                     if (i == 11) {
-                        text = "옥외탱크저장소(ET-103)";
+                        text = "옥외탱크저장소\n(ET-103)";
                     }
                     if (i == 12) {
-                        text = "옥외탱크저장소(ET-102)";
+                        text = "옥외탱크저장소\n(ET-102)";
                     }
                     if (i == 13) {
-                        text = "옥외탱크저장소(ET-101)";
+                        text = "옥외탱크저장소\n(ET-101)";
                     }
                     if (i == 14) {
                         text = "옥내저장소";
@@ -321,25 +309,25 @@ public class TableViewModel {
                         text = "제조소";
                     }
                     if(i == 19) {
-                        text = "옥외탱크저장소(ET-101)";
+                        text = "옥외탱크저장소\n(ET-101)";
                     }
                     if(i == 20) {
-                        text = "옥외탱크저장소(ET-102)";
+                        text = "옥외탱크저장소\n(ET-102)";
                     }
                     if(i == 21) {
-                        text = "옥외탱크저장소(ET-103)";
+                        text = "옥외탱크저장소\n(ET-103)";
                     }
                     if(i == 22) {
-                        text = "옥외탱크저장소(ET-104)";
+                        text = "옥외탱크저장소\n(ET-104)";
                     }
                     if(i == 23) {
-                        text = "옥외탱크저장소(ET-105)";
+                        text = "옥외탱크저장소\n(ET-105)";
                     }
                     if(i == 24) {
-                        text = "옥외탱크저장소(ET-106)";
+                        text = "옥외탱크저장소\n(ET-106)";
                     }
                     if(i == 25) {
-                        text = "옥외탱크저장소(ET-107)";
+                        text = "옥외탱크저장소\n(ET-107)";
                     }
                     if(i == 26) {
                         text = "지하탱크저장소";
@@ -348,7 +336,7 @@ public class TableViewModel {
                         text = "지하탱크저장소";
                     }
                     if(i == 28) {
-                        text = "옥외탱크저장소(경유)";
+                        text = "옥외탱크저장소\n(경유)";
                     }
                 }
                 else if (j == 2) {
@@ -618,67 +606,6 @@ public class TableViewModel {
                         text = "제22-2575-151023호";
                     }
                 }
-
-                /*else if (j == 4) {
-                    if (i == 0) {
-                        text = "102.76";
-                    }
-                    if (i == 1) {
-                        text = "1288.9";
-                    }
-                    if (i == 2) {
-                        text = "787.39";
-                    }
-                    if (i == 3) {
-                        text = "3,799.25";
-                    }
-                    if (i == 4) {
-                        text = "1,940.87";
-                    }
-                    if (i == 5) {
-                        text = "2,007.36";
-                    }
-                    if (i == 6) {
-                        text = "1,645.42";
-                    }
-                    if (i == 7) {
-                        text = "1,811.74";
-                    }
-                    if (i == 8) {
-                        text = "516.8";
-                    }
-                    if (i == 9) {
-                        text = "1,069.18";
-                    }
-                    if (i == 10) {
-                        text = "3,351.37";
-                    }
-                    if (i == 11) {
-                        text = "239.13";
-                    }
-                    if (i == 12) {
-                        text = "2,665.84";
-                    }
-                    if (i == 13) {
-                        text = "2,735.07";
-                    }
-                    if (i == 14) {
-                        text = "2,346.48";
-                    }
-                    if (i == 15) {
-                        text = "85.84";
-                    }
-                    if (i == 16) {
-                        text = "3,924.56";
-                    }
-                    if (i == 17) {
-                        text = "3,971.27";
-                    }
-                    if (i == 18) {
-                        text = "149.71";
-                    }
-                }*/
-
                 else if (j == 5) {
                     if (i == 0) {
                         text = "제4류 알코올류(에탄올)";
@@ -768,7 +695,6 @@ public class TableViewModel {
                         text = "제4류 2석유류(경유)";
                     }
                 }
-
                 else if (j == 6) {
                     if (i == 0) {
                         text = "7,900";
@@ -858,7 +784,6 @@ public class TableViewModel {
                         text = "18,000";
                     }
                 }
-
                 else if (j == 7) {
                     if (i == 0) {
                         text = "제조용";
@@ -948,7 +873,6 @@ public class TableViewModel {
                         text = "비상발전기용";
                     }
                 }
-
                 else if (j == 8) {
                     if (i == 0) {
                         text = "김충식";
@@ -1038,7 +962,6 @@ public class TableViewModel {
                         text = "김충식";
                     }
                 }
-
                 else if (j == 9) {
                     if (i == 0) {
                         text = "";
@@ -1050,11 +973,11 @@ public class TableViewModel {
                         text = "";
                     }
                     if (i == 3) {
-                        text = "기어류 및 오일류" +
+                        text = "기어류 및 오일류\n" +
                                 "바닥면적(39.96m2)";
                     }
                     if (i == 4) {
-                        text = "기어류 및 오일류" +
+                        text = "기어류 및 오일류\n" +
                                 "바닥면적(39.96m2)";
                     }
                     if (i == 5) {
@@ -1070,19 +993,19 @@ public class TableViewModel {
                         text = "재생에탄올";
                     }
                     if (i == 9) {
-                        text = "수직원통형(Ф1,600 x 1,600 x T8)";
+                        text = "수직원통형\n(Ф1,600 x 1,600 x T8)";
                     }
                     if (i == 10) {
-                        text = "수직원통형(Ф2,200 x 2,700 x T6)";
+                        text = "수직원통형\n(Ф2,200 x 2,700 x T6)";
                     }
                     if (i == 11) {
-                        text = "수직원통형(Ф2,200 x 2,700 x T6)";
+                        text = "수직원통형\n(Ф2,200 x 2,700 x T6)";
                     }
                     if (i == 12) {
-                        text = "수직원통형(Ф2,200 x 2,700 x T6)";
+                        text = "수직원통형\n(Ф2,200 x 2,700 x T6)";
                     }
                     if (i == 13) {
-                        text = "수직원통형(Ф1,800 x 2,000 x T5)";
+                        text = "수직원통형\n(Ф1,800 x 2,000 x T5)";
                     }
                     if (i == 14) {
                         text = "";
@@ -1097,35 +1020,35 @@ public class TableViewModel {
                         text = "";
                     }
                     if (i == 18) {
-                        text = "투입 - 폐 에탄올" +
+                        text = "투입 - 폐 에탄올\n" +
                                 "(비위험물)/(800L TK)";
                     }
                     if(i == 19) {
-                        text = "종형탱크 (Ф1,800 X 2,126)" +
+                        text = "종형탱크 (Ф1,800 X 2,126)\n" +
                                 "탱크번호 (ET-101)";
                     }
                     if(i == 20) {
-                        text = "종형탱크 (Ф2,200 X 2,852)" +
+                        text = "종형탱크 (Ф2,200 X 2,852)\n" +
                                 "탱크번호 (ET-102)";
                     }
                     if(i == 21) {
-                        text = "종형탱크 (Ф2,200 X 2,852)" +
+                        text = "종형탱크 (Ф2,200 X 2,852)\n" +
                                 "탱크번호 (ET-103)";
                     }
                     if(i == 22) {
-                        text = "종형탱크 (Ф2,200 X 2,852)" +
+                        text = "종형탱크 (Ф2,200 X 2,852)\n" +
                                 "탱크번호 (ET-104)";
                     }
                     if(i == 23) {
-                        text = "종형탱크 (Ф2,200 X 2,852)" +
+                        text = "종형탱크 (Ф2,200 X 2,852)\n" +
                                 "탱크번호 (ET-105)";
                     }
                     if(i == 24) {
-                        text = "종형탱크 (Ф2,200 X 2,852)" +
+                        text = "종형탱크 (Ф2,200 X 2,852)\n" +
                                 "탱크번호 (ET-106";
                     }
                     if(i == 25) {
-                        text = "종형탱크 (Ф2,200 X 2,852)" +
+                        text = "종형탱크 (Ф2,200 X 2,852)\n" +
                                 "탱크번호 (ET-107)";
                     }
                     if(i == 26) {
@@ -1135,7 +1058,7 @@ public class TableViewModel {
                         text = "";
                     }
                     if(i == 28) {
-                        text = "횡형탱크 (Ф2,600 X 3,300)";
+                        text = "횡형탱크\n(Ф2,600 X 3,300)";
                     }
                 }
 
@@ -1143,17 +1066,7 @@ public class TableViewModel {
                 String id = j + "-" + i;
 
                 Cell cell;
-
                 cell = new Cell(id, text);
-                /*if (j == 3) {
-                    cell = new Cell(id, text);
-                } else if (j == 4) {
-                    // NOTE female and male keywords for filter will have conflict since "female"
-                    // contains "male"
-                    cell = new Cell(id, text);
-                } else {
-                    cell = new Cell(id, text);
-                }*/
                 cellList.add(cell);
             }
             list.add(cellList);

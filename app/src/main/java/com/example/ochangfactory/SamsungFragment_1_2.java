@@ -18,12 +18,12 @@ import androidx.fragment.app.Fragment;
 import com.evrencoskun.tableview.TableView;
 import com.evrencoskun.tableview.filter.Filter;
 import com.evrencoskun.tableview.pagination.Pagination;
-import com.example.ochangfactory.tableview.GcTableViewAdapter_4_1;
-import com.example.ochangfactory.tableview.GcTableViewModel_4_1;
+import com.example.ochangfactory.tableview.SamsungTableViewAdapter_1_2;
+import com.example.ochangfactory.tableview.SamsungTableViewModel_1_2;
 import com.example.ochangfactory.tableview.TableViewListener;
 import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
-public class GcFragment_4_1 extends Fragment {
+public class SamsungFragment_1_2 extends Fragment {
     private Spinner moodFilter, genderFilter;
     private ImageButton previousButton, nextButton;
     private TextView tablePaginationDetails;
@@ -35,7 +35,7 @@ public class GcFragment_4_1 extends Fragment {
 
     private boolean mPaginationEnabled = false;
 
-    public GcFragment_4_1() {
+    public SamsungFragment_1_2() {
         super(R.layout.fragment_main);
     }
 
@@ -90,20 +90,20 @@ public class GcFragment_4_1 extends Fragment {
 
     private void initializeTableView() {
         // Create TableView View model class  to group view models of TableView
-        GcTableViewModel_4_1 gctableViewModel_4_1 = new GcTableViewModel_4_1();
+        SamsungTableViewModel_1_2 samsungTableViewModel_1_2 = new SamsungTableViewModel_1_2();
 
         // Create TableView Adapter
-        GcTableViewAdapter_4_1 GctableViewAdapter_4_1 = new GcTableViewAdapter_4_1(gctableViewModel_4_1);
+        SamsungTableViewAdapter_1_2 SamsungTableViewAdapter_1_2 = new SamsungTableViewAdapter_1_2(samsungTableViewModel_1_2);
 
-        mTableView.setAdapter(GctableViewAdapter_4_1);
+        mTableView.setAdapter(SamsungTableViewAdapter_1_2);
         mTableView.setTableViewListener(new TableViewListener(mTableView));
 
         // Create an instance of a Filter and pass the TableView.
         //mTableFilter = new Filter(mTableView);
 
         // Load the dummy data to the TableView
-        GctableViewAdapter_4_1.setAllItems(gctableViewModel_4_1.getColumnHeaderList(), gctableViewModel_4_1
-                .getRowHeaderList(), gctableViewModel_4_1.getCellList());
+        SamsungTableViewAdapter_1_2.setAllItems(samsungTableViewModel_1_2.getColumnHeaderList(), samsungTableViewModel_1_2
+                .getRowHeaderList(), samsungTableViewModel_1_2.getCellList());
 
         //mTableView.setHasFixedWidth(true);
 

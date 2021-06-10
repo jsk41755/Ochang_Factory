@@ -18,12 +18,11 @@ import androidx.fragment.app.Fragment;
 import com.evrencoskun.tableview.TableView;
 import com.evrencoskun.tableview.filter.Filter;
 import com.evrencoskun.tableview.pagination.Pagination;
-import com.example.ochangfactory.tableview.GcTableViewAdapter_4_1;
-import com.example.ochangfactory.tableview.GcTableViewModel_4_1;
+import com.example.ochangfactory.tableview.GcTableViewAdapter_3_1;
 import com.example.ochangfactory.tableview.TableViewListener;
 import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
-public class GcFragment_4_1 extends Fragment {
+public class GcFragment_3_1 extends Fragment {
     private Spinner moodFilter, genderFilter;
     private ImageButton previousButton, nextButton;
     private TextView tablePaginationDetails;
@@ -35,7 +34,7 @@ public class GcFragment_4_1 extends Fragment {
 
     private boolean mPaginationEnabled = false;
 
-    public GcFragment_4_1() {
+    public GcFragment_3_1() {
         super(R.layout.fragment_main);
     }
 
@@ -90,20 +89,20 @@ public class GcFragment_4_1 extends Fragment {
 
     private void initializeTableView() {
         // Create TableView View model class  to group view models of TableView
-        GcTableViewModel_4_1 gctableViewModel_4_1 = new GcTableViewModel_4_1();
+        GcTableViewModel_3_1 gcTableViewModel31 = new GcTableViewModel_3_1();
 
         // Create TableView Adapter
-        GcTableViewAdapter_4_1 GctableViewAdapter_4_1 = new GcTableViewAdapter_4_1(gctableViewModel_4_1);
+        GcTableViewAdapter_3_1 gcTableViewAdapter31 = new GcTableViewAdapter_3_1(gcTableViewModel31);
 
-        mTableView.setAdapter(GctableViewAdapter_4_1);
+        mTableView.setAdapter(gcTableViewAdapter31);
         mTableView.setTableViewListener(new TableViewListener(mTableView));
 
         // Create an instance of a Filter and pass the TableView.
         //mTableFilter = new Filter(mTableView);
 
         // Load the dummy data to the TableView
-        GctableViewAdapter_4_1.setAllItems(gctableViewModel_4_1.getColumnHeaderList(), gctableViewModel_4_1
-                .getRowHeaderList(), gctableViewModel_4_1.getCellList());
+        gcTableViewAdapter31.setAllItems(gcTableViewModel31.getColumnHeaderList(), gcTableViewModel31
+                .getRowHeaderList(), gcTableViewModel31.getCellList());
 
         //mTableView.setHasFixedWidth(true);
 
@@ -293,4 +292,4 @@ public class GcFragment_4_1 extends Fragment {
         public void afterTextChanged(Editable s) {
         }
     };
-}
+}                                                                                                                                                                                

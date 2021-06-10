@@ -20,14 +20,18 @@
         <activity android:name=".Samsung_1_1" />
         <activity android:name=".Samsung_1_2" />
         <activity android:name=".Samsung_1_3" />
+        <activity android:name=".Samsung_1_4" />
         <activity android:name=".Samsung_2_1" />
         <activity android:name=".Samsung_3_1" />
         <activity android:name=".Samsung_3_2" />
+        <activity android:name=".Samsung_4_1" />
+        <activity android:name=".Samsung_4_2" />
         <activity android:name=".Samsung_Main_Acticity" />
 
         <activity android:name=".Gcc_1_1" />
         <activity android:name=".Gcc_1_2" />
         <activity android:name=".Gcc_1_3" />
+        <activity android:name=".Gcc_1_4" />
         <activity android:name=".Gcc_2_1" />
         <activity android:name=".Gcc_3_1" />
         <activity android:name=".Gcc_3_2" />

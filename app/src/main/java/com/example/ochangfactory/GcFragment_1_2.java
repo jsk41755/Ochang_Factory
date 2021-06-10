@@ -21,7 +21,7 @@ import com.evrencoskun.tableview.pagination.Pagination;
 import com.example.ochangfactory.tableview.GcTableViewAdapter_1_2;
 import com.example.ochangfactory.tableview.GcTableViewModel_1_2;
 import com.example.ochangfactory.tableview.TableViewListener;
-import com.example.ochangfactory.tableview.TableViewModel;
+import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
 public class GcFragment_1_2 extends Fragment {
     private Spinner moodFilter, genderFilter;
@@ -104,19 +104,6 @@ public class GcFragment_1_2 extends Fragment {
         // Load the dummy data to the TableView
         GctableViewAdapter_1_2.setAllItems(gctableViewModel_1_2.getColumnHeaderList(), gctableViewModel_1_2
                 .getRowHeaderList(), gctableViewModel_1_2.getCellList());
-
-        //mTableView.setHasFixedWidth(true);
-
-        /*for (int i = 0; i < mTableViewModel.getCellList().size(); i++) {
-            mTableView.setColumnWidth(i, 200);
-        }*)
-        //mTableView.setColumnWidth(0, -2);
-        //mTableView.setColumnWidth(1, -2);
-        /*mTableView.setColumnWidth(2, 200);
-        mTableView.setColumnWidth(3, 300);
-        mTableView.setColumnWidth(4, 400);
-        mTableView.setColumnWidth(5, 500);*/
-
     }
 
     public void filterTable(@NonNull String filter) {
@@ -130,7 +117,7 @@ public class GcFragment_1_2 extends Fragment {
         // Sets a filter to the table, this will only filter a specific column.
         // In the example data, this will filter the mood column.
         if (mTableFilter != null) {
-            mTableFilter.set(TableViewModel.MOOD_COLUMN_INDEX, filter);
+            mTableFilter.set(GcTableViewModel_3_1.MOOD_COLUMN_INDEX, filter);
         }
     }
 
@@ -138,7 +125,7 @@ public class GcFragment_1_2 extends Fragment {
         // Sets a filter to the table, this will only filter a specific column.
         // In the example data, this will filter the gender column.
         if (mTableFilter != null) {
-            mTableFilter.set(TableViewModel.GENDER_COLUMN_INDEX, filter);
+            mTableFilter.set(GcTableViewModel_3_1.GENDER_COLUMN_INDEX, filter);
         }
     }
 

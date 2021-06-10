@@ -17,7 +17,12 @@
             android:id="@+id/nav1_3"
             android:title="@string/samnav1_3"
             />
+        <item
+            android:id="@+id/nav1_4"
+            android:title="@string/samnav1_4"
+            />
             </group>
+
 
         </menu>
     </item>
@@ -48,11 +53,6 @@
                     android:id="@+id/nav3_2"
                     android:title="@string/samnav3_2"
                     />
-                <item
-                    android:id="@+id/nav3_3"
-                    android:title="@string/samnav3_3"
-                    />
-
             </group>
 
         </menu>
@@ -70,33 +70,6 @@
                     android:id="@+id/nav4_2"
                     android:title="@string/samnav4_2"
                     />
-                <item
-                    android:id="@+id/nav4_3"
-                    android:title="@string/samnav4_3"
-                    />
-
-            </group>
-
-        </menu>
-    </item>
-
-    <item android:title="화재진압대책">
-        <menu>
-
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav5_1"
-                    android:title="@string/samnav5_1"
-                    />
-                <item
-                    android:id="@+id/nav5_2"
-                    android:title="@string/samnav5_2"
-                    />
-                <item
-                    android:id="@+id/nav5_3"
-                    android:title="@string/samnav5_3"
-                    />
-
             </group>
 
         </menu>

@@ -18,12 +18,12 @@ import androidx.fragment.app.Fragment;
 import com.evrencoskun.tableview.TableView;
 import com.evrencoskun.tableview.filter.Filter;
 import com.evrencoskun.tableview.pagination.Pagination;
-import com.example.ochangfactory.tableview.GcTableViewAdapter_4_1;
-import com.example.ochangfactory.tableview.GcTableViewModel_4_1;
+import com.example.ochangfactory.tableview.GcTableViewAdapter_2_1;
+import com.example.ochangfactory.tableview.GcTableViewModel_2_1;
 import com.example.ochangfactory.tableview.TableViewListener;
 import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
-public class GcFragment_4_1 extends Fragment {
+public class GcFragment_2_1 extends Fragment {
     private Spinner moodFilter, genderFilter;
     private ImageButton previousButton, nextButton;
     private TextView tablePaginationDetails;
@@ -35,7 +35,7 @@ public class GcFragment_4_1 extends Fragment {
 
     private boolean mPaginationEnabled = false;
 
-    public GcFragment_4_1() {
+    public GcFragment_2_1() {
         super(R.layout.fragment_main);
     }
 
@@ -90,20 +90,20 @@ public class GcFragment_4_1 extends Fragment {
 
     private void initializeTableView() {
         // Create TableView View model class  to group view models of TableView
-        GcTableViewModel_4_1 gctableViewModel_4_1 = new GcTableViewModel_4_1();
+        GcTableViewModel_2_1 gctableViewModel_2_1 = new GcTableViewModel_2_1();
 
         // Create TableView Adapter
-        GcTableViewAdapter_4_1 GctableViewAdapter_4_1 = new GcTableViewAdapter_4_1(gctableViewModel_4_1);
+        GcTableViewAdapter_2_1 GctableViewAdapter_2_1 = new GcTableViewAdapter_2_1(gctableViewModel_2_1);
 
-        mTableView.setAdapter(GctableViewAdapter_4_1);
+        mTableView.setAdapter(GctableViewAdapter_2_1);
         mTableView.setTableViewListener(new TableViewListener(mTableView));
 
         // Create an instance of a Filter and pass the TableView.
         //mTableFilter = new Filter(mTableView);
 
         // Load the dummy data to the TableView
-        GctableViewAdapter_4_1.setAllItems(gctableViewModel_4_1.getColumnHeaderList(), gctableViewModel_4_1
-                .getRowHeaderList(), gctableViewModel_4_1.getCellList());
+        GctableViewAdapter_2_1.setAllItems(gctableViewModel_2_1.getColumnHeaderList(), gctableViewModel_2_1
+                .getRowHeaderList(), gctableViewModel_2_1.getCellList());
 
         //mTableView.setHasFixedWidth(true);
 

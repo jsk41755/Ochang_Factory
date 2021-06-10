@@ -18,11 +18,12 @@ import androidx.fragment.app.Fragment;
 import com.evrencoskun.tableview.TableView;
 import com.evrencoskun.tableview.filter.Filter;
 import com.evrencoskun.tableview.pagination.Pagination;
-import com.example.ochangfactory.tableview.TableViewAdapter;
+import com.example.ochangfactory.tableview.SamsungTableViewAdapter_4_1;
+import com.example.ochangfactory.tableview.SamsungTableViewModel_4_1;
 import com.example.ochangfactory.tableview.TableViewListener;
-import com.example.ochangfactory.tableview.TableViewModel;
+import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
-public class MainFragment extends Fragment {
+public class SamsungFragment_4_1 extends Fragment {
     private Spinner moodFilter, genderFilter;
     private ImageButton previousButton, nextButton;
     private TextView tablePaginationDetails;
@@ -34,7 +35,7 @@ public class MainFragment extends Fragment {
 
     private boolean mPaginationEnabled = false;
 
-    public MainFragment() {
+    public SamsungFragment_4_1() {
         super(R.layout.fragment_main);
     }
 
@@ -89,20 +90,20 @@ public class MainFragment extends Fragment {
 
     private void initializeTableView() {
         // Create TableView View model class  to group view models of TableView
-        TableViewModel tableViewModel = new TableViewModel();
+        SamsungTableViewModel_4_1 samsungTableViewModel_4_1 = new SamsungTableViewModel_4_1();
 
         // Create TableView Adapter
-        TableViewAdapter tableViewAdapter = new TableViewAdapter(tableViewModel);
+        SamsungTableViewAdapter_4_1 SamsungTableViewAdapter_4_1 = new SamsungTableViewAdapter_4_1(samsungTableViewModel_4_1);
 
-        mTableView.setAdapter(tableViewAdapter);
+        mTableView.setAdapter(SamsungTableViewAdapter_4_1);
         mTableView.setTableViewListener(new TableViewListener(mTableView));
 
         // Create an instance of a Filter and pass the TableView.
         //mTableFilter = new Filter(mTableView);
 
         // Load the dummy data to the TableView
-        tableViewAdapter.setAllItems(tableViewModel.getColumnHeaderList(), tableViewModel
-                .getRowHeaderList(), tableViewModel.getCellList());
+        SamsungTableViewAdapter_4_1.setAllItems(samsungTableViewModel_4_1.getColumnHeaderList(), samsungTableViewModel_4_1
+                .getRowHeaderList(), samsungTableViewModel_4_1.getCellList());
 
         //mTableView.setHasFixedWidth(true);
 
@@ -129,7 +130,7 @@ public class MainFragment extends Fragment {
         // Sets a filter to the table, this will only filter a specific column.
         // In the example data, this will filter the mood column.
         if (mTableFilter != null) {
-            mTableFilter.set(TableViewModel.MOOD_COLUMN_INDEX, filter);
+            mTableFilter.set(GcTableViewModel_3_1.MOOD_COLUMN_INDEX, filter);
         }
     }
 
@@ -137,7 +138,7 @@ public class MainFragment extends Fragment {
         // Sets a filter to the table, this will only filter a specific column.
         // In the example data, this will filter the gender column.
         if (mTableFilter != null) {
-            mTableFilter.set(TableViewModel.GENDER_COLUMN_INDEX, filter);
+            mTableFilter.set(GcTableViewModel_3_1.GENDER_COLUMN_INDEX, filter);
         }
     }
 
@@ -292,4 +293,4 @@ public class MainFragment extends Fragment {
         public void afterTextChanged(Editable s) {
         }
     };
-}                                                                                                                                                                                
+}

@@ -29,7 +29,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 
 import com.example.ochangfactory.R;
-import com.example.ochangfactory.tableview.TableViewModel;
+import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
 /**
  * Created by evrencoskun on 4.02.2018.
@@ -44,7 +44,7 @@ public class GenderCellViewHolder extends MoodCellViewHolder {
     @Override
     public void setData(Object data) {
         int gender = (int) data;
-        int genderDrawable = gender == TableViewModel.BOY ? R.drawable.ic_male : R.drawable.ic_female;
+        int genderDrawable = gender == GcTableViewModel_3_1.BOY ? R.drawable.ic_male : R.drawable.ic_female;
 
         cell_image.setImageResource(genderDrawable);
     }

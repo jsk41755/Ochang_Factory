@@ -85,18 +85,6 @@ public class GcTableViewModel_1_2 {
         i++;
         list.add(header);
 
-
-        /*for (int i = 0; i < COLUMN_SIZE; i++) {
-            String title = "column " + i;
-            int nRandom = new Random().nextInt();
-            if (nRandom % 4 == 0 || nRandom % 3 == 0 || nRandom == i) {
-                title = "large column " + i;
-            }
-
-            ColumnHeader header = new ColumnHeader(String.valueOf(i), title);
-            list.add(header);
-        }*/
-
         return list;
     }
 
@@ -408,67 +396,6 @@ public class GcTableViewModel_1_2 {
                         text = "149.71";
                     }
                 }
-
-                /*else if (j == 4) {
-                    if (i == 0) {
-                        text = "102.76";
-                    }
-                    if (i == 1) {
-                        text = "1288.9";
-                    }
-                    if (i == 2) {
-                        text = "787.39";
-                    }
-                    if (i == 3) {
-                        text = "3,799.25";
-                    }
-                    if (i == 4) {
-                        text = "1,940.87";
-                    }
-                    if (i == 5) {
-                        text = "2,007.36";
-                    }
-                    if (i == 6) {
-                        text = "1,645.42";
-                    }
-                    if (i == 7) {
-                        text = "1,811.74";
-                    }
-                    if (i == 8) {
-                        text = "516.8";
-                    }
-                    if (i == 9) {
-                        text = "1,069.18";
-                    }
-                    if (i == 10) {
-                        text = "3,351.37";
-                    }
-                    if (i == 11) {
-                        text = "239.13";
-                    }
-                    if (i == 12) {
-                        text = "2,665.84";
-                    }
-                    if (i == 13) {
-                        text = "2,735.07";
-                    }
-                    if (i == 14) {
-                        text = "2,346.48";
-                    }
-                    if (i == 15) {
-                        text = "85.84";
-                    }
-                    if (i == 16) {
-                        text = "3,924.56";
-                    }
-                    if (i == 17) {
-                        text = "3,971.27";
-                    }
-                    if (i == 18) {
-                        text = "149.71";
-                    }
-                }*/
-
                 else if (j == 5) {
                     if (i == 0) {
                         text = "102.76";
@@ -528,7 +455,6 @@ public class GcTableViewModel_1_2 {
                         text = "149.71";
                     }
                 }
-
                 else if (j == 6) {
                     if (i == 0) {
                         text = "3";
@@ -588,7 +514,6 @@ public class GcTableViewModel_1_2 {
                         text = "-";
                     }
                 }
-
                 else if (j == 7) {
                     if (i == 0) {
                         text = "";
@@ -639,7 +564,7 @@ public class GcTableViewModel_1_2 {
                         text = "";
                     }
                     if (i == 16) {
-                        text = "알부민 주, 아이비글로불린 주, 그린모노";
+                        text = "알부민 주, 아이비글로불린 주,\n 그린모노";
                     }
                     if (i == 17) {
                         text = "";
@@ -653,17 +578,7 @@ public class GcTableViewModel_1_2 {
                 String id = j + "-" + i;
 
                 Cell cell;
-
                 cell = new Cell(id, text);
-                /*if (j == 3) {
-                    cell = new Cell(id, text);
-                } else if (j == 4) {
-                    // NOTE female and male keywords for filter will have conflict since "female"
-                    // contains "male"
-                    cell = new Cell(id, text);
-                } else {
-                    cell = new Cell(id, text);
-                }*/
                 cellList.add(cell);
             }
             list.add(cellList);

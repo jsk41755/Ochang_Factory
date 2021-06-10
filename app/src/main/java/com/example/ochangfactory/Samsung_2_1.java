@@ -8,19 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.github.chrisbanes.photoview.PhotoView;
 
 public class Samsung_2_1 extends AppCompatActivity {
-    private PhotoView mPhotoView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        setContentView(R.layout.activity_2_1);
-
-        createMapView();
-    }
-
-    private void createMapView() {
-        mPhotoView = findViewById(R.id.iv_photo);
-        mPhotoView.setImageResource(R.drawable.samsung_firefighting_graph_2_1);
+    public Samsung_2_1() {
+        super(R.layout.samsung_activity_2_1);
     }
 }

@@ -95,6 +95,9 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
             case  R.id.nav1_3:
                 startActivity(new Intent(getApplicationContext(),Samsung_1_3.class));
                 break;
+            case  R.id.nav1_4:
+                startActivity(new Intent(getApplicationContext(),Samsung_1_4.class));
+                break;
             case  R.id.nav2_1:
                 startActivity(new Intent(getApplicationContext(),Samsung_2_1.class));
                 break;
@@ -103,6 +106,12 @@ public class Samsung_Main_Acticity extends AppCompatActivity implements Navigati
                 break;
             case  R.id.nav3_2:
                 startActivity(new Intent(getApplicationContext(),Samsung_3_2.class));
+                break;
+            case  R.id.nav4_1:
+                startActivity(new Intent(getApplicationContext(),Samsung_4_1.class));
+                break;
+            case  R.id.nav4_2:
+                startActivity(new Intent(getApplicationContext(),Samsung_4_2.class));
                 break;
         }
 

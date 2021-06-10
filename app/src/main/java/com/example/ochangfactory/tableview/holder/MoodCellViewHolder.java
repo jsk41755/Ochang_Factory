@@ -31,7 +31,7 @@ import androidx.annotation.NonNull;
 
 import com.evrencoskun.tableview.adapter.recyclerview.holder.AbstractViewHolder;
 import com.example.ochangfactory.R;
-import com.example.ochangfactory.tableview.TableViewModel;
+import com.example.ochangfactory.tableview.GcTableViewModel_3_1;
 
 /**
  * Created by evrencoskun on 4.02.2018.
@@ -48,7 +48,7 @@ public class MoodCellViewHolder extends AbstractViewHolder {
 
     public void setData(Object data) {
         int mood = (int) data;
-        int moodDrawable = mood == TableViewModel.HAPPY ? R.drawable.ic_happy : R.drawable.ic_sad;
+        int moodDrawable = mood == GcTableViewModel_3_1.HAPPY ? R.drawable.ic_happy : R.drawable.ic_sad;
 
         cell_image.setImageResource(moodDrawable);
     }
