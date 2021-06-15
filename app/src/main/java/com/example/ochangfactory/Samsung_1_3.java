@@ -18,14 +18,14 @@ public class Samsung_1_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_1_3);
 
-        recyclerView = findViewById(R.id.recyclerView_1_3);
+        /*recyclerView = findViewById(R.id.recyclerView_1_3);
 
         s1 = getResources().getStringArray(R.array.samsung_building_situation);
         s2 = getResources().getStringArray(R.array.samsung_description_1_3);
 
         Menu_1_3Adapter menu_1_3Adapter = new Menu_1_3Adapter(this, s1, s2, s3);
         recyclerView.setAdapter(menu_1_3Adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));*/
         createMapView();
     }
 

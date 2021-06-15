@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/frameLayout"
+        android:id="@+id/GcmapView"
         android:layout_width="match_parent"
         android:layout_height="450dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,14 +18,14 @@
         tools:context=".Samsung_1_2">
 
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/iv_photo"
+            android:id="@+id/iv_photo1_3"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:scaleType="fitCenter"
             android:src="@drawable/samsung_plot_plan_1_3" />
     </FrameLayout>
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/dragView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frameLayout">
+        app:layout_constraintTop_toBottomOf="@id/GcmapView">
 
         <RelativeLayout
             android:id="@+id/Relative_1_3"
@@ -135,11 +137,7 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
 
 
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
